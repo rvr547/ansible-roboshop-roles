@@ -11,3 +11,13 @@
   ansible.builtin.import_role:
     name: common
     tasks_from: appsetup
+
+- name: Install dependencies
+  ansible.builtin.command: npm install
+  args:
+    chdir: /app
+
+- name: install nodejs
+  ansible.builtin.import_role:
+    name: common
+    tasks_from: systemdsetup
