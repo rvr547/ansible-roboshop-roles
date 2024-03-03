@@ -16,25 +16,13 @@
   ansible.builtin.command: npm install
   args:
     chdir: /app
-
-- name: install nodejs
-  ansible.builtin.import_role:
-    name: common
-    tasks_from: systemdsetup
-
+    
 - name: Load schema
   ansible.builtin.import_role:
     name: common
     tasks_from: loadschema
 
-- name: copy mongo repo
-    ansible.builtin.copy:
-      src: mongo.repo
-      dest: /etc/yum.repos.d/mongo.repo
-
-  - name: install mongo org shell
-    ansible.builtin.yum: 
-     name: mongodb-org-shell
-     state: installed
-
-  
+- name: setup application
+  ansible.builtin.import_role:
+    name: common
+    tasks_from: systemdsetup
