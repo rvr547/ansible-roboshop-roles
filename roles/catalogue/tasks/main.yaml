@@ -1,0 +1,8 @@
+#we need to refer common folder for nodejs file
+#Here catalog is one role and common is another role
+#we need to import nodejs
+
+- name: install nodejs
+  ansible.builtin.import_roles:
+    name: common
+    tasks_from: nodejs
