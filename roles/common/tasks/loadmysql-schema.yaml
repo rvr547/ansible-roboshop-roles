@@ -1,7 +1,7 @@
 - name: Install myql
-    ansible.builtin.yum:
-      name: mysql
-      state: installed
+  ansible.builtin.yum:
+    name: mysql
+    state: installed
 
-  - name: load shipping data
-    ansible.builtin.shell: mysql -h mysql.preprv.online -uroot -pRoboShop@1 < /app/schema/{{component}}.sql 
+- name: load shipping data
+  ansible.builtin.shell: mysql -h mysql.preprv.online -uroot -pRoboShop@1 < /app/schema/{{component}}.sql 
