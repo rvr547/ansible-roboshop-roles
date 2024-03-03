@@ -1,2 +1,2 @@
 - name: load {{component}} data
-    ansible.builtin.shell: mongo --host mongodb.preprv.online </app/schema/{{component}}.js
+  ansible.builtin.shell: mongo --host mongodb.preprv.online </app/schema/{{component}}.js
