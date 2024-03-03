@@ -1,0 +1,5 @@
+CATALOGUE_HOST: catalogue.preprv.online
+USER_HOST: user.preprv.online
+CART_HOST: cart.preprv.online
+SHIPPING_HOST: shipping.preprv.online
+PAYMENT_HOST: payment.preprv.online
